@@ -93,7 +93,8 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
     if (i.lon <= lon1 and i.lon >= lon2) or (i.lon <= lon2 and i.lon >= lon1):
       if (i.lat <= lat1 and i.lat >= lat2) or (i.lat <= lat2 and i.lat >= lat1):
         within.append(i)
+        print(F"{i.name}: ({i.lat},{i.lon})")
 
   return within
 
-print(cityreader_stretch(firstLat, firstLon, secondLat, secondLon, cities))
+cityreader_stretch(firstLat, firstLon, secondLat, secondLon, cities)
